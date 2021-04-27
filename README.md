@@ -2,15 +2,15 @@
 
 
 
-## About 
+## About
 
 EggShell is a post exploitation surveillance tool written in Python. It gives you a command line session with extra functionality between you and a target machine. EggShell gives you the power and convenience of uploading/downloading files, tab completion, taking pictures, location tracking, shell command execution, persistence, escalating privileges, password retrieval, and much more.  This is project is a proof of concept, intended for use on machines you own.
 
 <img src="http://lucasjackson.io/images/eggshell/main-menu.png?3" alt="Main menu" width="500px;"/>
 
-For detailed information and how-to visit 
+For detailed information and how-to visit http://lucasjackson.io/eggshell
 
-Follow me on Twitter @Habibmustafa201
+Follow me on twitter: @neoneggplant
 
 <hr style="height:1px; background:#9EA4A9">
 
@@ -41,6 +41,32 @@ Install EggShell 3
 Use any mobile terminal application and run the command eggshell
 
 <img src="http://lucasjackson.io/images/eggshell/main-menu-ios.png?3" alt="Main menu" width="400px;"/>
+
+<hr style="height:1px; background:#9EA4A9">
+
+
+
+## Creating Payloads
+Eggshell payloads are executed on the target machine.  The payload first sends over instructions for getting and sending back device details to our server and then chooses the appropriate executable to establish a secure remote control session.
+
+### bash
+Selecting bash from the payload menu will give us a 1 liner that establishes an eggshell session upon execution on the target machine
+
+<img src="http://lucasjackson.io/images/eggshell/bash-payload.png" alt="Bash payload" width="300px"/>
+
+### teensy macOS (USB injection)
+Teensy is a USB development board that can be programmed with the Arduino ide.  It emulates usb keyboard strokes extremely fast and can inject the EggShell payload just in a few seconds.
+
+<img src="http://lucasjackson.io/images/eggshell/teensy.jpg" alt="Teensy macOS payload" width="250px"/>
+
+Selecting teensy will give us an arduino based payload for the teensy board.
+
+<img src="http://lucasjackson.io/images/eggshell/teensy-macos-payload.png" alt="Teensy macOS payload" width="450px"/>
+
+After uploading to the teensy, we can use the device to plug into a macOS usb port.  Once connected to a computer, it will automatically emulate the keystrokes needed to execute a payload.
+
+<img src="http://lucasjackson.io/images/eggshell/arduino-ide.png" alt="Teensy macOS payload" width="450px"/>
+
 <hr style="height:1px; background:#9EA4A9">
 
 
